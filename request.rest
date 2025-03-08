@@ -1,0 +1,103 @@
+POST http://backend-spendwise.vercel.app/api/auth/register
+Content-Type: application/json
+
+{
+    "full_name": "bagas",
+    "email": "bagas123@spendwise.com",
+    "password": "bagas123"
+}
+
+###
+POST https://spendwise-backend-sigma.vercel.app/api
+Content-Type: application/json
+
+{
+  "email": "bagas2134@gmail.com",
+  "password": "bagas2134"
+}
+
+# cek expense
+###
+GET http://localhost:3000/api/expenses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJiYWdhczIxMzRAZ21haWwuY29tIiwiaWF0IjoxNzQxMDgxODEzLCJleHAiOjE3NDExNjgyMTN9.fkOIP_8YzuIwHoOWWIbDPmuCt1JsvbjuYlHkA1cPL_Y
+
+# tambah expense
+###
+POST http://localhost:3000/api/expenses
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJiYWdhczIxMzRAZ21haWwuY29tIiwiaWF0IjoxNzQxMDgxODEzLCJleHAiOjE3NDExNjgyMTN9.fkOIP_8YzuIwHoOWWIbDPmuCt1JsvbjuYlHkA1cPL_Y
+
+{
+  "category": "Chicken",
+  "amount": 8000,
+  "date": "2025-03-04",
+  "icon": "🍗"
+}
+
+### update expense
+PUT http://localhost:3000/api/expenses/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJiYWdhczIxMzRAZ21haWwuY29tIiwiaWF0IjoxNzQxMDgxODEzLCJleHAiOjE3NDExNjgyMTN9.fkOIP_8YzuIwHoOWWIbDPmuCt1JsvbjuYlHkA1cPL_Y
+
+{
+  "category": "Transport",
+  "amount": 50000,
+  "date": "2025-03-05",
+  "icon": "🚗"
+}
+
+### hapus expense
+DELETE http://localhost:3000/api/expenses/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJiYWdhczIxMzRAZ21haWwuY29tIiwiaWF0IjoxNzQxMDgxODEzLCJleHAiOjE3NDExNjgyMTN9.fkOIP_8YzuIwHoOWWIbDPmuCt1JsvbjuYlHkA1cPL_Y
+
+# cek income
+###
+GET http://localhost:3000/api/income
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJiYWdhczIxMzRAZ21haWwuY29tIiwiaWF0IjoxNzQxMDgxODEzLCJleHAiOjE3NDExNjgyMTN9.fkOIP_8YzuIwHoOWWIbDPmuCt1JsvbjuYlHkA1cPL_Y
+
+### tambah income
+POST http://localhost:3000/api/income
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJiYWdhczIxMzRAZ21haWwuY29tIiwiaWF0IjoxNzQxMDgxODEzLCJleHAiOjE3NDExNjgyMTN9.fkOIP_8YzuIwHoOWWIbDPmuCt1JsvbjuYlHkA1cPL_Y
+
+{
+  "source": "Joki Web",
+  "amount": 100000,
+  "date": "2025-03-04",
+  "icon": "💰"
+}
+
+### edit income
+PUT http://localhost:3000/api/income/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJiYWdhczIxMzRAZ21haWwuY29tIiwiaWF0IjoxNzQxMDgxODEzLCJleHAiOjE3NDExNjgyMTN9.fkOIP_8YzuIwHoOWWIbDPmuCt1JsvbjuYlHkA1cPL_Y
+
+{
+  "source": "Joki Web",
+  "amount": 200000,
+  "date": "2025-03-05",
+  "icon": "💻"
+}
+
+### hapus income
+DELETE http://localhost:3000/api/income/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJiYWdhczIxMzRAZ21haWwuY29tIiwiaWF0IjoxNzQxMDgxODEzLCJleHAiOjE3NDExNjgyMTN9.fkOIP_8YzuIwHoOWWIbDPmuCt1JsvbjuYlHkA1cPL_Y
+
+
+# cek balance
+###
+GET http://localhost:3000/api/balance/summary
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJiYWdhczIxMzRAZ21haWwuY29tIiwiaWF0IjoxNzQxMDgxODEzLCJleHAiOjE3NDExNjgyMTN9.fkOIP_8YzuIwHoOWWIbDPmuCt1JsvbjuYlHkA1cPL_Y
+
+
+### recent transaction
+GET http://localhost:3000/api/balance/recent-transactions
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJiYWdhczIxMzRAZ21haWwuY29tIiwiaWF0IjoxNzQxMDgxODEzLCJleHAiOjE3NDExNjgyMTN9.fkOIP_8YzuIwHoOWWIbDPmuCt1JsvbjuYlHkA1cPL_Y
+
+### monthly
+GET http://localhost:3000/api/balance/monthly-balance
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJiYWdhczIxMzRAZ21haWwuY29tIiwiaWF0IjoxNzQxMDgxODEzLCJleHAiOjE3NDExNjgyMTN9.fkOIP_8YzuIwHoOWWIbDPmuCt1JsvbjuYlHkA1cPL_Y
+
+### monthly
+GET http://localhost:3000/api/balance/summary-by-date
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJiYWdhczIxMzRAZ21haWwuY29tIiwiaWF0IjoxNzQxMDgxODEzLCJleHAiOjE3NDExNjgyMTN9.fkOIP_8YzuIwHoOWWIbDPmuCt1JsvbjuYlHkA1cPL_Y
